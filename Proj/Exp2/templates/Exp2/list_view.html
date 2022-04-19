@@ -1,0 +1,36 @@
+{% include 'Exp2/navbar.html' %}
+{% include 'Exp2/main.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+ <table class="table" align="center">
+    <tr>
+        <th><h1>Title</h1></th>
+        <th></th>
+    </tr>
+    {% for data in dataset %}
+    <tr>
+        <td><h4><a href="{% url 'detail_view' data.id %}">{{ data.title }}</a></h4></td>
+        <td><h4><a href="{% url 'update' data.id %}">Update</a></h4></td>
+    </tr>
+
+    {% endfor %}
+</table>
+</div>
+</body>
+<style>
+h4{
+  text-align: center;
+  font-family: 'Caveat', cursive;
+}
+</style>
+</html>

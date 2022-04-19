@@ -1,0 +1,26 @@
+{% load static %}
+{% include 'Exp2/navbar.html' %}
+{% include 'Exp2/main.html' %}
+    <title>CRUD</title>
+
+<head>
+
+</head>
+
+<body>
+{% block content %}
+    {% if user.is_authenticated %}
+        <h5>Welcome: {{ user.username }}</h5>
+    {% else %}
+        <h1>You are not logged in.</h1>
+    {% endif %}
+
+    <h1>Hi</h1>
+
+
+
+{% endblock %}
+</body>
+
+
+

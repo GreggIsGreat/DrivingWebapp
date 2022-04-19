@@ -1,0 +1,32 @@
+{% include 'Exp2/navbar.html' %}
+{% include 'Exp2/main.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail_view</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap" rel="stylesheet">
+</head>
+<body>
+<br>
+<div class="container">
+
+    {% for Int in dataset %}
+        <h1><strong>Title:</strong> {{ Int.title }}<hr/></h1>
+        <h1><strong>Description:</strong>{{ Int.description }}</h1>
+    <hr/>
+
+    {% endfor %}
+</div>
+</body>
+<style>
+h1{
+  text-align: center;
+  font-family: 'Grechen Fuemen', cursive;
+}
+
+</style>
+</html>

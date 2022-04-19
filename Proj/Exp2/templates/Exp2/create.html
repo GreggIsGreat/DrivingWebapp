@@ -1,0 +1,32 @@
+{% load static %}
+{% include 'Exp2/navbar.html' %}
+{% include 'Exp2/main.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'static/css/mainss.css' %}">
+</head>
+<body>
+
+<h1>Create</h1>
+
+{% block content %}
+<form action="" method="POST" enctype="multipart/form-data">
+
+    <!-- Security token -->
+    {% csrf_token %}
+
+    <!-- Using the formset -->
+    {{ form.as_p }}
+
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
+</body>
+<style>
+
+</style>
+</html>

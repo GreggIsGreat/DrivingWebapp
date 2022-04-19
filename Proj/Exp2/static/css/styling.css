@@ -1,0 +1,13 @@
+h1{
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+}
+
+
+#bg{
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+}
+
